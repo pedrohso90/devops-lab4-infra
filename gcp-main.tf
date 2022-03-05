@@ -4,7 +4,7 @@ resource "google_sql_database_instance" "db_pedroh" {
 
   settings {
     tier = "db-f1-micro"
-    ip_configuration {
+    ip_configuration = {
       authorized_networks = "0.0.0.0/0"
     }
   }
