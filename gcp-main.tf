@@ -1,3 +1,8 @@
+resource "google_sql_database" "db_pedroh" {
+  name     = "db-pedroh"
+  instance = google_sql_database_instance.db_pedroh.name
+}
+
 resource "google_sql_database_instance" "db_pedroh" {
   name             = "db-pedroh"
   database_version = "POSTGRES_13"
@@ -6,7 +11,7 @@ resource "google_sql_database_instance" "db_pedroh" {
     tier = "db-f1-micro"
     ip_configuration {
       authorized_networks {
-        name = "all"
+        name  = "all"
         value = "0.0.0.0/0"
       }
     }
