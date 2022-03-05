@@ -13,4 +13,6 @@ resource "google_sql_user" "db_pedroh" {
   password = var.password
 }
 
-output "public_ip_address " {value=google_sql_database_instance.db_pedroh.public_ip_address}
+output "public_ip_address" {
+  value = google_sql_database_instance.db_pedroh.public_ip_address
+}
