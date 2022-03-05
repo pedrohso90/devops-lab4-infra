@@ -1,2 +1,2 @@
-var "username" {}
-var "password" {}
+variable "username" {}
+variable "password" {}
