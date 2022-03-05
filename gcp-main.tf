@@ -7,8 +7,9 @@ resource "google_sql_database" "db_pedroh" {
 }
 
 resource "google_sql_database_instance" "db_pedroh" {
-  name             = "db-pedroh"
-  database_version = "POSTGRES_13"
+  name                = "db-pedroh"
+  database_version    = "POSTGRES_13"
+  deletion_protection = "false"
 
   settings {
     tier = "db-f1-micro"
