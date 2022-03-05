@@ -1,3 +1,6 @@
+variable "username" {}
+variable "password" {}
+
 resource "google_sql_database" "db_pedroh" {
   name     = "db-pedroh"
   instance = google_sql_database_instance.db_pedroh.name
